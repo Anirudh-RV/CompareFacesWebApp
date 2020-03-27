@@ -28,7 +28,6 @@ def scan_known_people(known_people_folder):
         known_face_encodings.append(encodings[0])
     return known_names, known_face_encodings
 
-
 def test_image(image_to_check, known_names, known_face_encodings):
     unknown_image = face_recognition.load_image_file(image_to_check)
 
@@ -53,11 +52,8 @@ def test_image(image_to_check, known_names, known_face_encodings):
     else:
         return "0","Many Faces or No Faces"
 
-
-
 def image_files_in_folder(folder):
     return [os.path.join(folder, f) for f in os.listdir(folder) if re.match(r'.*\.(jpg|jpeg|png)', f, flags=re.I)]
-
 
 def main(known_people_folder, image_to_check):
     known_names, known_face_encodings = scan_known_people(known_people_folder)
