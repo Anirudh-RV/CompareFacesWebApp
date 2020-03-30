@@ -25,8 +25,8 @@ import numpy as np
 source : https://github.com/12345k/Two-Face-Comparison
 To run :
 python3 compareFace.py  hardy1face.jpg hardy2face.jpg
-
 face_recognition github : https://github.com/ageitgey/face_recognition
+Dlib : http://dlib.net/
 '''
 import os
 import re
@@ -140,6 +140,8 @@ def index(request):
 
     print("all matches after: \n"+str(listofmatches))
     print("Backend Process Complete")
+    elapsed_time = time.time() - start_time
+    print("Performace measure : "+str(elapsed_time))
     context = {"data":listofmatches}
     return render(request, 'index.html', context)
 
