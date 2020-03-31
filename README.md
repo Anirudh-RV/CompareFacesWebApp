@@ -1,4 +1,4 @@
-#Implementation Mechanism :
+# Implementation Mechanism :
 The process of Recognising people is done with two separate steps :
 1. Cropping out the face from the body of a person which yolo has recognised
 2. Comparing a given face with the faces already stored in the backend
